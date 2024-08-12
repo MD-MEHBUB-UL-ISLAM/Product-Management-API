@@ -2,7 +2,7 @@ const request = require('supertest');
 const app = require('../app');
 const sequelize = require('../config/database');
 
-beforeAll(async () => {
+before(async () => {
   await sequelize.sync({ force: true });
 });
 
